@@ -5,7 +5,6 @@ A very simple application to test the tests tools. :-))))
 [![Build Status](https://travis-ci.org/CaelProjects/experiments.svg?branch=master)](https://travis-ci.org/CaelProjects/experiments)
 [![Coverage Status](https://coveralls.io/repos/github/CaelProjects/experiments/badge.svg?branch=master)](https://coveralls.io/github/CaelProjects/experiments?branch=master)
 
-
 Getting started
 ----------------
 * To compile application and tests, and run tests:
