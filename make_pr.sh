@@ -12,10 +12,14 @@ cp $templateName $fileName
 Date=`date`
 echo $Date >> $fileName
 
-git checkout branchForTest
-git commit -a -m "$Date"
-git push
-
-git checkout master
-
-./make_pr.py
+if git checkout branchForTest
+then
+   if git commit -a -m "$Date"
+   then
+      if git push
+      then
+         git checkout master
+         ./make_pr.py
+      fi
+   fi
+fi
