@@ -93,4 +93,4 @@ The pom.xml includes instructions to run Descartes on DHEL. To run Descartes:
 ```
 mvn org.pitest:pitest-maven:mutationCoverage
 ```
-mardi 29 mai 2018, 16:58:37 (UTC+0200)
+mardi 29 mai 2018, 17:07:31 (UTC+0200)
