@@ -8,12 +8,13 @@ CurrentDir=`pwd`
 fileName="README.md"
 templateName="README.template"
 
-cp $templateName $fileName
-Date=`date`
-echo $Date >> $fileName
 
 if git checkout branchForTest
 then
+   cp $templateName $fileName
+   Date=`date`
+   echo $Date >> $fileName
+
    if git commit -a -m "$Date"
    then
       if git push

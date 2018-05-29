@@ -12,6 +12,6 @@ myToken = myFile.readline()[:-1]
 githubLogin = login(token=myToken)
 repo = githubLogin.repository('CaelProjects', 'experiments')
 
-pullRequest = repo.create_pull('my PR', 'master', 'CaelProjects:branchForTest', 'foo')
+pullRequest = repo.create_pull('my PR', 'master', 'CaelInria:branchForTest', 'foo')
 
 sys.exit(1 if not pullRequest else 0)
