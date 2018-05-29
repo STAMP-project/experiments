@@ -1,5 +1,4 @@
 DHELL: Dummy HELLo world  
-new
 A very simple application to test the tests tools. :-))))
 
 
@@ -94,3 +93,4 @@ The pom.xml includes instructions to run Descartes on DHEL. To run Descartes:
 ```
 mvn org.pitest:pitest-maven:mutationCoverage
 ```
+mardi 29 mai 2018, 15:25:57 (UTC+0200)
