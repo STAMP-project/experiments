@@ -1,4 +1,4 @@
-A simple project to test GitHub App test-app-cael.
+A simple project to test [GitHub App Descartes](https://github.com/apps/descartes).
 
 
 [![Build Status](https://travis-ci.org/CaelProjects/experiments.svg?branch=master)](https://travis-ci.org/CaelProjects/experiments)
@@ -10,5 +10,7 @@ mvn install
 
 Execute Descartes
 -----------------
-mvn pitmp:run
-mercredi 30 mai 2018, 17:01:02 (UTC+0200)
+```
+mvn install
+mvn eu.stamp-project:pitmp-maven-plugin:descartes
+```
