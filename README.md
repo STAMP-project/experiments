@@ -14,4 +14,4 @@ Execute Descartes
 mvn install
 mvn eu.stamp-project:pitmp-maven-plugin:descartes
 ```
-lundi 18 juin 2018, 19:59:01 (UTC+0200)
+mardi 19 juin 2018, 14:33:07 (UTC+0200)
