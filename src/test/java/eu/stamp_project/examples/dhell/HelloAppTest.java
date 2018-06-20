@@ -137,6 +137,7 @@ public class HelloAppTest
         String countString = Integer.toString(myCount);
         String helloString = "---------------------- Hello World !";
         String MyTracesName = "hello_run3.traces";
+        String valueString = "---------------------- 69.11503837897544";
         // String message;
 
         myApp = new HelloApp(myCount, MyTracesName);
@@ -150,6 +151,7 @@ public class HelloAppTest
         assertEquals(true, fileContent.isEqual(myApp.getMyTraces()));
         assertEquals(true, countString.equals(fileContent.getData(0)));
         assertEquals(true, helloString.equals(fileContent.getData(2)));
+        assertEquals(true, valueString.equals(fileContent.getData(4)));
     }
 
     // **********************************************************************
