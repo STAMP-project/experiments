@@ -202,3 +202,4 @@ public class HelloApp
     private MyStorage MyTraces;
     private boolean ShouldPrintOnStdout;
 }
+// mercredi 20 juin 2018, 11:00:15 (UTC+0200)
