@@ -167,11 +167,11 @@ public class HelloApp
     // **********************************************************************
     public int cardMyTraces()
     {
-        int theCard = 0;
+        int theCard = 1;
 
-        if (MyTraces != null)
+        if (MyTraces == null)
         {
-            theCard = 1;
+            theCard = 0;
         }
 
         return(theCard);
