@@ -89,9 +89,11 @@ public class HelloApp
     {
         String methodName = "run";
         MyLogger.Instance.entering(getClass().getName(), methodName);
+        Double myValue = computeMyUselessResult();
 
         String indent = "-";
         String countString = Integer.toString(MyPrintCount);
+        String valueString = Double.toString(myValue);
 
         if (MyTracesName.length() > 0)
         {
@@ -112,6 +114,7 @@ public class HelloApp
         myPrint(indent);
         myPrint(indent + " Hello World !");
         myPrint(indent);
+        myPrint(indent + " " + valueString);
 
         MyTraces.saveData();
 
@@ -119,7 +122,7 @@ public class HelloApp
     }
 
     // **********************************************************************
-    public void computeMyUselessResult()
+    public Double computeMyUselessResult()
     {
         // PI = 3,141 592 653 589 793 - PI (10 chiffres exactes) ~ 104348 / 33215
         // PI = 3,1415926535 8979323846 2643383279 5028841971 6939937510 5820974944
@@ -127,6 +130,8 @@ public class HelloApp
         // PHI = (1 + rootsquare(5)) / 2 = 1,618 033 988 7
         // PHI = 1,618 033 988 749 894 848 204 586 834 365 638 117 720 309 179 805
         //        762 862 135 448 622 705 260 462 189 024 497 072 072 041
+        Double result = getMyPrintCount() * 3.141592653589793238462643383279;
+        return(result);
     }
 
     // **********************************************************************
