@@ -19,7 +19,7 @@ public class HelloApp
         MyLogger.Instance.entering(getClass().getName(), methodName);
 
         MyPrintCount = 1;
-        MyTraces = null;
+        _MyTraces = null;
         MyTracesName = "myHelloApp.traces";
         ShouldPrintOnStdout = true;
         MyStorage.deleteFile(MyTracesName);
@@ -37,7 +37,7 @@ public class HelloApp
         MyLogger.Instance.entering(getClass().getName(), methodName);
 
         MyPrintCount = printCount;
-        MyTraces = null;
+        _MyTraces = null;
         MyTracesName = "myHelloApp.traces";
         ShouldPrintOnStdout = true;
         MyStorage.deleteFile(MyTracesName);
@@ -55,7 +55,7 @@ public class HelloApp
         MyLogger.Instance.entering(getClass().getName(), methodName);
 
         MyPrintCount = 1;
-        MyTraces = null;
+        _MyTraces = null;
         MyTracesName = tracesName;
         ShouldPrintOnStdout = true;
         MyStorage.deleteFile(MyTracesName);
@@ -73,7 +73,7 @@ public class HelloApp
         MyLogger.Instance.entering(getClass().getName(), methodName);
 
         MyPrintCount = printCount;
-        MyTraces = null;
+        _MyTraces = null;
         MyTracesName = tracesName;
         ShouldPrintOnStdout = true;
         MyStorage.deleteFile(MyTracesName);
@@ -97,14 +97,14 @@ public class HelloApp
 
         if (MyTracesName.length() > 0)
         {
-            MyTraces = new MyStorage(MyTracesName);
+            _MyTraces = new MyStorage(MyTracesName);
         }
         else
         {
-            MyTraces = new MyStorage();
+            _MyTraces = new MyStorage();
         }
 
-        MyTraces.addData(countString);
+        _MyTraces.addData(countString);
 
         for (int i = 1; i < MyPrintCount; i++)
         {
@@ -116,7 +116,7 @@ public class HelloApp
         myPrint(indent);
         myPrint(indent + " " + valueString);
 
-        MyTraces.saveData();
+        _MyTraces.saveData();
 
         MyLogger.Instance.exiting(getClass().getName(), methodName);
     }
@@ -169,7 +169,7 @@ public class HelloApp
     {
         int theCard = 0;
 
-        if (MyTraces != null)
+        if (_MyTraces != null)
         {
             theCard = 1;
         }
@@ -180,7 +180,7 @@ public class HelloApp
     // **********
     public MyStorage getMyTraces()
     {
-        return(MyTraces);
+        return(_MyTraces);
     }
 
     // **********************************************************************
@@ -195,7 +195,7 @@ public class HelloApp
         {
             System.out.println(message);
         }
-        MyTraces.addData(message);
+        _MyTraces.addData(message);
     }
 
     // **********************************************************************
@@ -204,6 +204,6 @@ public class HelloApp
     // ******** attributes
     private int MyPrintCount;
     private String MyTracesName;
-    private MyStorage MyTraces;
+    private MyStorage _MyTraces;
     private boolean ShouldPrintOnStdout;
 }
